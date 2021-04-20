@@ -112,6 +112,13 @@ client.connect(err => {
       res.send(document)
     })
   })
+  // get all serivice
+  app.get('/allservice',(req,res)=>{
+    serviceCollection.find({})
+    .toArray((err,document)=>{
+      res.send(document)
+    })
+  })
 
   // get all serivice
   app.get('/allreview',(req,res)=>{
